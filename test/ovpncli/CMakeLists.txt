@@ -25,6 +25,7 @@ if (${CLI_DCO})
     add_core_dependencies(ovpnclidco)
     add_kovpn_dependency(ovpnclidco)
     target_include_directories(ovpnclidco PRIVATE ${KOVPN_SOURCE})
+    target_include_directories(ovpnclidco PRIVATE "${KOVPN_SOURCE}/linux-uapi")
     target_compile_definitions(ovpnclidco PRIVATE -DENABLE_DCO)
 endif ()
 
